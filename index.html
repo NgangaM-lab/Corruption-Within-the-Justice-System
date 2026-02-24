@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corruption and Justice System | Ng'ang'a Munyua</title>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --primary: #0f172a;
+      --accent: #dc2626;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    body.dark {
+      --bg: #020617;
+      --card: #0f172a;
+      --text: #e2e8f0;
+      --primary: #e2e8f0;
+      --shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s ease;
+    }
+
+    header {
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: white;
+      padding: 70px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    header p { opacity: 0.85; }
+
+    .toggle {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--card);
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      padding: 30px 20px 80px;
+    }
+
+    section {
+      margin-bottom: 45px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    section:nth-child(odd) { animation-delay: 0.1s; }
+    section:nth-child(even) { animation-delay: 0.2s; }
+
+    h2 {
+      border-left: 5px solid var(--accent);
+      padding-left: 12px;
+      color: var(--primary);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 22px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      margin-top: 14px;
+    }
+
+    ul { padding-left: 20px; }
+
+    /* Chart */
+    .chart {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      align-items: flex-end;
+      height: 160px;
+    }
+
+    .bar {
+      flex: 1;
+      background: var(--accent);
+      border-radius: 6px 6px 0 0;
+      animation: grow 1s ease forwards;
+    }
+
+    .bar span {
+      font-size: 0.75rem;
+      display: block;
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5f5;
+      text-align: center;
+      padding: 30px 12px;
+    }
+
+    .present-btn {
+      margin-top: 25px;
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes grow {
+      from { height: 0; }
+    }
+
+    /* Responsive but professional (no mobile app styling) */
+    @media (max-width: 700px) {
+      header h1 { font-size: 2rem; }
+      nav { flex-wrap: wrap; }
+      nav a { display: inline-block; margin: 6px; }
+    }
+      nav { overflow-x: auto; white-space: nowrap; }
+      .container { padding-bottom: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <button class="toggle" onclick="toggleDark()">🌙 Dark</button>
+  <h1>Corruption in Justice Systems</h1>
+  <p>By Ng'ang'a Munyua • Global Perspectives 2026</p>
+</header>
+
+<nav>
+  <a href="#intro">Intro</a>
+  <a href="#causes">Causes</a>
+  <a href="#effects">Effects</a>
+  <a href="#perspectives">Perspectives</a>
+  <a href="#sources">Sources</a>
+  <a href="#refs">References</a>
+</nav>
+
+<div class="container">
+
+<section id="intro">
+  <h2>Introduction</h2>
+  <div class="card">
+    Corruption is the abuse of power for personal gain, especially within institutions responsible for fairness and law enforcement. This project explores whether corruption within justice systems contributes to rising crime, using global data and a Ukrainian case study.
+  </div>
+</section>
+
+<section id="causes">
+  <h2>Main Causes</h2>
+  <div class="card">
+    <ul>
+      <li>Weak accountability structures</li>
+      <li>Excessive official discretion</li>
+      <li>Underfunded justice institutions</li>
+    </ul>
+
+    <div class="chart">
+      <div class="bar" style="height:80%"></div>
+      <div class="bar" style="height:65%"></div>
+      <div class="bar" style="height:55%"></div>
+    </div>
+    <small>Estimated impact of key corruption drivers</small>
+  </div>
+</section>
+
+<section id="effects">
+  <h2>Consequences</h2>
+  <div class="card">
+    <ul>
+      <li>Restricted access to justice</li>
+      <li>Increased inequality before the law</li>
+      <li>Public mistrust in institutions</li>
+      <li>Rise of mob justice and crime</li>
+    </ul>
+  </div>
+</section>
+
+<section id="perspectives">
+  <h2>Global vs National Perspectives</h2>
+  <div class="card">
+    <p><b>Global:</b> Countries with strong institutions experience less corruption and higher public satisfaction.</p>
+    <p><b>Ukraine Case:</b> Major protests in 2020 and 2025 highlighted deep public mistrust and demand for anti-corruption reforms.</p>
+    <p><b>Conclusion:</b> Corruption consistently weakens justice systems and contributes to crime through mistrust and inequality.</p>
+  </div>
+</section>
+
+<section id="sources">
+  <h2>Source Evaluation</h2>
+  <div class="card">
+    This project used trusted global sources including Transparency International and Deutsche Welle. These organizations provide evidence-based research, expert analysis, and internationally verified reporting.
+  </div>
+</section>
+
+<section id="refs">
+  <h2>References</h2>
+  <div class="card">
+    <ul>
+      <li>Transparency International Reports</li>
+      <li>United Nations Anti-Corruption Studies</li>
+      <li>Deutsche Welle International Coverage</li>
+      <li>Ethics and Anti-Corruption Commission Kenya</li>
+    </ul>
+  </div>
+</section>
+
+<div style="text-align:center">
+  <button class="present-btn" onclick="window.print()">📸 Presentation Mode (Screenshot/Print)</button>
+</div>
+
+</div>
+
+<footer>
+  NAISULA School Kajiado • Candidate 0037 • Ng'ang'a Munyua
+</footer>
+
+<script>
+function toggleDark() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
