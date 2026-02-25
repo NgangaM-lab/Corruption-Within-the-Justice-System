@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Corruption and Justice System | Ng'ang'a Munyua</title>
+  <title>Corruption Within the Justice System | Ng'ang'a Munyua</title>
 
   <style>
     :root {
       --bg: #f8fafc;
       --card: #ffffff;
       --text: #0f172a;
-      --primary: #0f172a;
       --accent: #dc2626;
-      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --primary: #020617;
+      --shadow: 0 15px 40px rgba(0,0,0,0.08);
     }
 
     body.dark {
@@ -20,31 +20,31 @@
       --card: #0f172a;
       --text: #e2e8f0;
       --primary: #e2e8f0;
-      --shadow: 0 10px 30px rgba(0,0,0,0.6);
+      --shadow: 0 15px 40px rgba(0,0,0,0.5);
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: "Inter", "Segoe UI", sans-serif;
+      font-family: Inter, "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
+      line-height: 1.7;
       transition: 0.3s ease;
     }
 
     header {
       background: linear-gradient(135deg, #020617, #0f172a);
       color: white;
-      padding: 70px 20px 60px;
+      padding: 80px 20px 70px;
       text-align: center;
       position: relative;
-      overflow: hidden;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.6rem;
+      font-size: 2.7rem;
       animation: fadeUp 0.8s ease forwards;
     }
 
@@ -52,29 +52,29 @@
 
     .toggle {
       position: absolute;
-      top: 15px;
-      right: 20px;
-      background: rgba(255,255,255,0.1);
+      top: 18px;
+      right: 18px;
+      background: rgba(255,255,255,0.15);
       border: none;
       color: white;
       padding: 8px 14px;
       border-radius: 999px;
       cursor: pointer;
+      font-weight: 600;
     }
 
     nav {
       position: sticky;
       top: 0;
       background: var(--card);
-      padding: 12px;
+      padding: 14px;
       text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 3px 14px rgba(0,0,0,0.06);
       z-index: 10;
     }
 
     nav a {
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       color: var(--primary);
       font-weight: 600;
@@ -84,58 +84,68 @@
     nav a:hover { color: var(--accent); }
 
     .container {
-      max-width: 950px;
+      max-width: 1000px;
       margin: auto;
-      padding: 30px 20px 80px;
+      padding: 40px 22px 80px;
     }
 
     section {
-      margin-bottom: 45px;
+      margin-bottom: 50px;
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUp 0.6s ease forwards;
     }
 
-    section:nth-child(odd) { animation-delay: 0.1s; }
-    section:nth-child(even) { animation-delay: 0.2s; }
-
     h2 {
       border-left: 5px solid var(--accent);
       padding-left: 12px;
       color: var(--primary);
+      margin-bottom: 15px;
     }
 
     .card {
       background: var(--card);
-      padding: 22px;
-      border-radius: 18px;
+      padding: 26px;
+      border-radius: 20px;
       box-shadow: var(--shadow);
-      margin-top: 14px;
     }
 
-    ul { padding-left: 20px; }
+    .highlight {
+      background: rgba(220,38,38,0.1);
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
 
-    /* Chart */
-    .chart {
-      display: flex;
-      gap: 10px;
+    .accordion {
       margin-top: 15px;
-      align-items: flex-end;
-      height: 160px;
     }
 
-    .bar {
-      flex: 1;
-      background: var(--accent);
-      border-radius: 6px 6px 0 0;
-      animation: grow 1s ease forwards;
+    .accordion button {
+      width: 100%;
+      text-align: left;
+      padding: 12px;
+      border: none;
+      background: rgba(0,0,0,0.04);
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 8px;
     }
 
-    .bar span {
-      font-size: 0.75rem;
-      display: block;
-      text-align: center;
-      margin-top: 6px;
+    .accordion-content {
+      display: none;
+      padding: 10px 6px 0;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .quote {
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
+      margin: 16px 0;
+      font-style: italic;
+      opacity: 0.9;
     }
 
     footer {
@@ -146,7 +156,7 @@
     }
 
     .present-btn {
-      margin-top: 25px;
+      margin-top: 30px;
       background: var(--accent);
       border: none;
       color: white;
@@ -156,23 +166,8 @@
       cursor: pointer;
     }
 
-    /* Animations */
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes grow {
-      from { height: 0; }
-    }
-
-    /* Responsive but professional (no mobile app styling) */
-    @media (max-width: 700px) {
-      header h1 { font-size: 2rem; }
-      nav { flex-wrap: wrap; }
-      nav a { display: inline-block; margin: 6px; }
-    }
-      nav { overflow-x: auto; white-space: nowrap; }
-      .container { padding-bottom: 100px; }
     }
   </style>
 </head>
@@ -180,17 +175,18 @@
 
 <header>
   <button class="toggle" onclick="toggleDark()">🌙 Dark</button>
-  <h1>Corruption in Justice Systems</h1>
-  <p>By Ng'ang'a Munyua • Global Perspectives 2026</p>
+  <h1>Does Corruption Within the Justice System Lead to More Crime?</h1>
+  <p>By Ng'ang'a Munyua • Cambridge Global Perspectives</p>
 </header>
 
 <nav>
-  <a href="#intro">Intro</a>
+  <a href="#intro">Introduction</a>
   <a href="#causes">Causes</a>
-  <a href="#effects">Effects</a>
+  <a href="#effects">Consequences</a>
   <a href="#perspectives">Perspectives</a>
-  <a href="#sources">Sources</a>
-  <a href="#refs">References</a>
+  <a href="#evaluation">Evaluation</a>
+  <a href="#action">Solutions</a>
+  <a href="#reflection">Conclusion</a>
 </nav>
 
 <div class="container">
@@ -198,70 +194,91 @@
 <section id="intro">
   <h2>Introduction</h2>
   <div class="card">
-    Corruption is the abuse of power for personal gain, especially within institutions responsible for fairness and law enforcement. This project explores whether corruption within justice systems contributes to rising crime, using global data and a Ukrainian case study.
+    Corruption is defined as the abuse of power for personal gain, especially among individuals in positions of authority. The justice system refers to institutions responsible for ensuring fairness, enforcing laws, and protecting citizens. This research explores whether corruption within justice systems contributes to rising crime levels globally.
+
+    <div class="quote">
+      Nearly 80% of respondents identified corruption as the biggest barrier to accessing justice (EACC, 2023).
+    </div>
+
+    This project was inspired by observing how corruption weakens institutions and undermines trust in law enforcement. The research examines causes, consequences, and both national and global perspectives.
   </div>
 </section>
 
 <section id="causes">
-  <h2>Main Causes</h2>
+  <h2>Causes of Corruption</h2>
   <div class="card">
-    <ul>
-      <li>Weak accountability structures</li>
-      <li>Excessive official discretion</li>
-      <li>Underfunded justice institutions</li>
-    </ul>
+    One major cause of corruption within the justice system is the <span class="highlight">lack of accountability mechanisms</span>. Weak administrative oversight allows corruption to occur without detection, eroding the rule of law and diminishing public trust.
 
-    <div class="chart">
-      <div class="bar" style="height:80%"></div>
-      <div class="bar" style="height:65%"></div>
-      <div class="bar" style="height:55%"></div>
+    Another significant factor is <span class="highlight">excessive discretion</span> given to justice officials. While discretion allows flexibility in decision-making, it also creates opportunities for abuse of power.
+
+    <div class="accordion">
+      <button onclick="toggleAcc(this)">More Causes</button>
+      <div class="accordion-content">
+        Additional drivers include underfunded institutions, weak anti-corruption laws, and cultural normalization of bribery. When systems lack transparency and oversight, corruption becomes embedded within institutions.
+      </div>
     </div>
-    <small>Estimated impact of key corruption drivers</small>
   </div>
 </section>
 
 <section id="effects">
   <h2>Consequences</h2>
   <div class="card">
-    <ul>
-      <li>Restricted access to justice</li>
-      <li>Increased inequality before the law</li>
-      <li>Public mistrust in institutions</li>
-      <li>Rise of mob justice and crime</li>
-    </ul>
+    Corruption in the justice system leads to severe societal consequences. One of the most immediate effects is <span class="highlight">limited access to justice</span>. Bribery and favoritism create barriers that prevent equal treatment under the law.
+
+    More importantly, corruption leads to <span class="highlight">loss of public trust</span>. When citizens believe the system is unfair, they may turn to alternative forms of justice such as vigilantism or mob justice.
+
+    <div class="quote">
+      Corruption weakens judicial capacity and encourages illegal alternatives to formal justice systems (UNODC, 2017).
+    </div>
   </div>
 </section>
 
 <section id="perspectives">
   <h2>Global vs National Perspectives</h2>
   <div class="card">
-    <p><b>Global:</b> Countries with strong institutions experience less corruption and higher public satisfaction.</p>
-    <p><b>Ukraine Case:</b> Major protests in 2020 and 2025 highlighted deep public mistrust and demand for anti-corruption reforms.</p>
-    <p><b>Conclusion:</b> Corruption consistently weakens justice systems and contributes to crime through mistrust and inequality.</p>
+    Globally, corruption in justice systems is widely recognized as a barrier to fairness and development. Countries with strong judicial institutions, such as Nordic nations, consistently report lower corruption levels and higher public satisfaction.
+
+    <p><b>Ukraine Case Study:</b> In contrast, Ukraine provides a national perspective marked by widespread mistrust. Protests in 2020 and 2025 demonstrated public frustration with judicial corruption and weakened anti-corruption laws.</p>
+
+    Both perspectives reveal a shared theme: corruption erodes trust and weakens institutional legitimacy. However, the Ukrainian perspective highlights direct citizen activism and political pressure for reform.
   </div>
 </section>
 
-<section id="sources">
-  <h2>Source Evaluation</h2>
+<section id="evaluation">
+  <h2>Evaluation of Sources</h2>
   <div class="card">
-    This project used trusted global sources including Transparency International and Deutsche Welle. These organizations provide evidence-based research, expert analysis, and internationally verified reporting.
+    This research relied on credible global organizations such as Transparency International and Deutsche Welle. Transparency International operates in over 100 countries and focuses on holding powerful institutions accountable. Deutsche Welle provides internationally verified journalism supported by expert analysis and corroborated reporting.
+
+    Using multiple reputable sources strengthened the reliability of this research and ensured balanced perspectives.
   </div>
 </section>
 
-<section id="refs">
-  <h2>References</h2>
+<section id="action">
+  <h2>Course of Action</h2>
   <div class="card">
+    Without strong reforms, corruption within justice systems could continue to increase crime and societal instability. Several solutions can address this issue:
+
     <ul>
-      <li>Transparency International Reports</li>
-      <li>United Nations Anti-Corruption Studies</li>
-      <li>Deutsche Welle International Coverage</li>
-      <li>Ethics and Anti-Corruption Commission Kenya</li>
+      <li>Strengthening monitoring of courts and judicial institutions</li>
+      <li>Introducing stricter penalties for corrupt officials</li>
+      <li>Expanding anti-corruption agencies' powers</li>
+      <li>Improving transparency through public awareness campaigns</li>
+      <li>Reforming laws to enhance accountability</li>
     </ul>
   </div>
 </section>
 
+<section id="reflection">
+  <h2>Reflection and Conclusion</h2>
+  <div class="card">
+    This research revealed that corruption within justice systems is not only widespread but deeply impactful. It undermines fairness, fuels mistrust, and contributes to rising crime levels. The Ukrainian case study demonstrated how corruption can trigger public protests and institutional instability.
+
+    Initially, the scale of this issue was underestimated. However, the research led to a significant shift in perspective. It is now clear that corruption within the justice system can directly and indirectly lead to increased crime by weakening trust, accountability, and the rule of law.
+  </div>
+</section>
+
 <div style="text-align:center">
-  <button class="present-btn" onclick="window.print()">📸 Presentation Mode (Screenshot/Print)</button>
+  <button class="present-btn" onclick="window.print()">📸 Presentation Mode</button>
 </div>
 
 </div>
@@ -273,6 +290,11 @@
 <script>
 function toggleDark() {
   document.body.classList.toggle("dark");
+}
+
+function toggleAcc(btn) {
+  const content = btn.nextElementSibling;
+  content.style.display = content.style.display === "block" ? "none" : "block";
 }
 </script>
 
